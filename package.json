@@ -7,7 +7,8 @@
     "style-loader": "^0.20.2",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.10",
-    "webpack-dev-server": "^3.1.0"
+    "webpack-dev-server": "^3.1.0",
+    "webpack-merge": "^4.1.2"
   },
   "name": "webpack",
   "version": "1.0.0",
@@ -264,8 +265,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --content-base ./ --open --inline --hot --compress",
-    "build": "webpack"
+    "dev": "webpack-dev-server --open --hot --compress --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "author": "pan",
   "license": "ISC",

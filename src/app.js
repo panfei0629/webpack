@@ -3,9 +3,13 @@ import './style.css';
 import Icon from './icon.png';
 import printMe from './print.js';
 
+if (process.env.NODE_ENV !== 'production') {
+    console.log('Looks like we are in development mode!');
+}
+
 function component() {
     var element = document.createElement('div');
-    element.innerHTML = _.join(['Hello', 'webpack', ' ']);
+    element.innerHTML = _.join(['Hello!', 'webpack', ' ']);
 
     element.classList.add('hello');
 
